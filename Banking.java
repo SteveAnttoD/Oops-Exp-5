@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-// Base Class
 class Account {
     protected String cust_name;
     protected int accno;
@@ -39,7 +38,6 @@ class Account {
     }
 }
 
-// Savings Account Subclass
 class SavingsAccount extends Account {
     private final double interestRate = 0.06;
 
@@ -63,7 +61,6 @@ class SavingsAccount extends Account {
     }
 }
 
-// Current Account Subclass
 class CurrentAccount extends Account {
     private final double serviceCharge = 0.035;
 
@@ -84,12 +81,11 @@ class CurrentAccount extends Account {
     }
 
     public void deposit(double amount) {
-        balance += amount; // No interest for Current Account
+        balance += amount;
         System.out.println("$" + amount + " deposited successfully! No interest added.");
     }
 }
 
-// Main Banking Class
 public class Banking {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -157,3 +153,4 @@ public class Banking {
         sc.close();
     }
 }
+
